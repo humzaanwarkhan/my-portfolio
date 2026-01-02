@@ -81,6 +81,17 @@ export default function App() {
               "Optimized performance and handled live production issues.",
             ]}
           />
+
+          <ExperienceItem
+            role="Bug Bounty Hunter"
+            company="Bugcrowd Platform"
+            duration="Feb 2025 – Dec 2025"
+            points={[
+              "Actively tested real-world web applications for vulnerabilities on the Bugcrowd platform.",
+              "Performed reconnaissance, endpoint mapping, and authentication testing using Burp Suite.",
+              "Practiced identifying OWASP Top 10 issues including IDOR, authentication flaws, and API misconfigurations.",
+            ]}
+          />
         </div>
       </section>
 
@@ -119,7 +130,7 @@ export default function App() {
           />
         </div>
       </section>
-<Footer />
+      <Footer />
     </div>
   );
 }
@@ -141,8 +152,6 @@ function ExperienceItem({ role, company, duration, points }) {
         </ul>
       </div>
     </div>
-
-
   );
 }
 
@@ -179,4 +188,3 @@ function Footer() {
     </footer>
   );
 }
-
