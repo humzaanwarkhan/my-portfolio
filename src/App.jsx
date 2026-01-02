@@ -92,7 +92,7 @@ export default function App() {
           <Project
             title="Memento - Your private space"
             desc="A secure personal memory & notes management application built with a strong focus on privacy. Designed to minimize data exposure, implement strict access controls, and follow secure authentication principles to protect user information."
-            link="https://memento-frontend-phi.vercel.app"
+            website="https://memento-frontend-phi.vercel.app"
           />
 
           <Project
