@@ -10,7 +10,26 @@ export default function App() {
           <p className="text-primary font-medium mb-3">
             Backend Developer · Security Enthusiast
           </p>
-          <h1 className="text-5xl font-bold">Humza Anwar Khan</h1>
+          <div className="flex items-center gap-6 flex-wrap">
+            <h1 className="text-5xl font-bold">Humza Anwar Khan</h1>
+
+            <a
+              href="/my-portfolio/resume.pdf"
+              target="_blank"
+              className="text-primary border border-primary px-5 py-2 rounded-lg text-sm font-medium hover:bg-primary hover:text-white transition"
+            >
+              View Resume
+            </a>
+
+            <a
+              href="/my-portfolio/resume.pdf"
+              download
+              className="text-muted border border-gray-300 px-5 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 transition"
+            >
+              Download Resume
+            </a>
+          </div>
+
           <p className="text-muted mt-6 max-w-xl leading-relaxed">
             I am a final year B.Tech Computer Science student with hands-on
             experience in backend development and application security. I
