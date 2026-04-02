@@ -22,7 +22,7 @@ export default function App() {
             </a>
 
             <a
-              href="/my-portfolio/resume.pdf"
+              href="/my-portfolio/HUMZA-ANWAR-KHAN-RESUME.pdf"
               download
               className="text-muted border border-gray-300 px-5 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 transition"
             >
