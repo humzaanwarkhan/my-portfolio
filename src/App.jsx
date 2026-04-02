@@ -14,7 +14,7 @@ export default function App() {
             <h1 className="text-5xl font-bold">Humza Anwar Khan</h1>
 
             <a
-              href="/my-portfolio/HUMZA-ANWAR-KHAN-RESUME.pdf"
+              href="/my-portfolio/resume.pdf"
               target="_blank"
               className="text-primary border border-primary px-5 py-2 rounded-lg text-sm font-medium hover:bg-primary hover:text-white transition"
             >
@@ -22,7 +22,7 @@ export default function App() {
             </a>
 
             <a
-              href="/my-portfolio/HUMZA-ANWAR-KHAN-RESUME.pdf"
+              href="/my-portfolio/resume.pdf"
               download
               className="text-muted border border-gray-300 px-5 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 transition"
             >
