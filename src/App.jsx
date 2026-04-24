@@ -10,6 +10,7 @@ export default function App() {
           <p className="text-primary font-medium mb-3">
             Backend Developer · Security Enthusiast
           </p>
+
           <div className="flex items-center gap-6 flex-wrap">
             <h1 className="text-5xl font-bold">Humza Anwar Khan</h1>
 
@@ -31,41 +32,20 @@ export default function App() {
           </div>
 
           <p className="text-muted mt-6 max-w-xl leading-relaxed">
-            I am a final year B.Tech Computer Science student with hands-on
-            experience in backend development and application security. I
-            specialize in building secure authentication systems, designing
-            production-grade APIs, and thinking from an attacker’s mindset while
-            writing server-side code.
-            <br />
-            <br />
-            Alongside development, I actively practice bug hunting through CTF
-            competitions and vulnerability research, with a strong interest in
-            OWASP Top 10, authentication bypasses, and API security.
+            I build secure backend systems with a strong focus on authentication,
+            API design, and real-world security practices. I approach development
+            with an attacker’s mindset to minimize vulnerabilities and design
+            resilient applications.
           </p>
 
           <div className="flex gap-6 mt-8 text-primary">
-            <a
-              href="https://github.com/humzaanwarkhan"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-70 transition"
-            >
+            <a href="https://github.com/humzaanwarkhan" target="_blank">
               <Github />
             </a>
-
-            <a
-              href="https://www.linkedin.com/in/humza-anwar-khan"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-70 transition"
-            >
+            <a href="https://linkedin.com/in/humza-anwar-khan" target="_blank">
               <Linkedin />
             </a>
-
-            <a
-              href="mailto:humzaanwarkhan@gmail.com"
-              className="hover:opacity-70 transition"
-            >
+            <a href="mailto:humzaanwarkhan@gmail.com">
               <Mail />
             </a>
           </div>
@@ -84,9 +64,9 @@ export default function App() {
             company="Shutter Troops"
             duration="June 2025 – Sept 2025"
             points={[
-              "Designed and implemented secure authentication flows using Firebase, Express & JWT.",
-              "Built protected APIs with role-based access and validation.",
-              "Handled email workflows, password reset logic and deployment.",
+              "Implemented secure authentication flows using Firebase, Express & JWT.",
+              "Built protected APIs with validation and role-based access.",
+              "Designed password reset flows and handled production deployment.",
             ]}
           />
 
@@ -95,20 +75,9 @@ export default function App() {
             company="Sukhanvar Studio"
             duration="Oct 2025 – Dec 2025"
             points={[
-              "Built and maintained the production website of sukhanvar.studio.",
-              "Managed independent development, fixes and feature updates.",
-              "Optimized performance and handled live production issues.",
-            ]}
-          />
-
-          <ExperienceItem
-            role="Bug Bounty Hunter"
-            company="Bugcrowd Platform"
-            duration="Feb 2025 – Dec 2025"
-            points={[
-              "Actively tested real-world web applications for vulnerabilities on the Bugcrowd platform.",
-              "Performed reconnaissance, endpoint mapping, and authentication testing using Burp Suite.",
-              "Practiced identifying OWASP Top 10 issues including IDOR, authentication flaws, and API misconfigurations.",
+              "Developed and maintained production website.",
+              "Handled performance optimization and real-world bug fixes.",
+              "Managed independent deployments and feature updates.",
             ]}
           />
         </div>
@@ -118,37 +87,53 @@ export default function App() {
       <section className="section px-6">
         <h2 className="text-3xl font-semibold mb-12">Projects</h2>
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 auto-rows-fr">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+          {/* FEATURED */}
+          <div className="md:col-span-2">
+            <Project
+              featured
+              title="Memento — Private Memory System"
+              desc="Designed a privacy-first personal memory application with strict access control and secure authentication. Implemented session protection strategies and minimized data exposure by design."
+              website="https://memento-frontend-phi.vercel.app"
+              tech={["React", "Node.js", "MongoDB", "Firebase", "JWT"]}
+              highlight="Security-first architecture"
+            />
+          </div>
+
           <Project
-            title="Memento - Your private space"
-            desc="A secure personal memory & notes management application built with a strong focus on privacy. Designed to minimize data exposure, implement strict access controls, and follow secure authentication principles to protect user information."
-            website="https://memento-frontend-phi.vercel.app"
+            title="Secure Auth Backend"
+            desc="Built a production-ready authentication system with JWT, refresh token rotation, CSRF protection, rate limiting, and input validation to mitigate common web attacks."
+            link="https://github.com/humzaanwarkhan/secure-auth-repo"
+            tech={["Node.js", "Express", "JWT", "Firebase"]}
+            highlight="Auth · API Security"
           />
 
           <Project
-            title="Sukhanvar Studio's Website"
-            desc="An e-commerce website developed for a lifestyle brand, sukhanvar.studio, handling product showcase, content flow, and frontend performance optimization."
+            title="Sukhanvar Studio Website"
+            desc="Developed a live e-commerce website with optimized frontend performance and clean content flow for better user experience."
             website="https://sukhanvar.com"
-          />
-          <Project
-            title="Secure Auth Backend"
-            desc="A security-first backend authentication system implementing JWT-based access control, Firebase authentication, CSRF protection, rate limiting, and input validation to defend against common web vulnerabilities."
-            link="https://github.com/humzaanwarkhan/secure-auth-repo"
+            tech={["React", "Tailwind"]}
+            highlight="Production deployment"
           />
 
           <Project
             title="SubEnum"
-            desc="A Python-based subdomain enumeration tool to extract subdomains from wildcard scopes, assisting in information gathering and reconnaissance during penetration testing."
+            desc="Built a Python-based subdomain enumeration tool for extracting subdomains from wildcard scopes during reconnaissance."
             link="https://github.com/humzaanwarkhan/subEnum"
+            tech={["Python"]}
+            highlight="Automation tool"
           />
 
           <Project
             title="OneRecon"
-            desc="A Python automation tool that combines five critical reconnaissance processes into a single streamlined workflow, reducing manual effort during bug hunting."
+            desc="Automated multiple reconnaissance processes into a unified workflow, reducing manual effort and improving efficiency."
             link="https://github.com/humzaanwarkhan/oneRecon"
+            tech={["Python"]}
+            highlight="Workflow automation"
           />
         </div>
       </section>
+
       <Footer />
     </div>
   );
@@ -174,25 +159,50 @@ function ExperienceItem({ role, company, duration, points }) {
   );
 }
 
-function Project({ title, desc, link, website }) {
+function Project({ title, desc, link, website, tech, featured, highlight }) {
   return (
-    <div className="card p-8 flex flex-col justify-between">
+    <div
+      className={`card p-8 flex flex-col justify-between transition duration-300 
+      hover:-translate-y-2 hover:shadow-xl ${
+        featured ? "border-2 border-primary bg-gray-50" : ""
+      }`}
+    >
       <div>
         <h3 className="font-semibold text-lg">{title}</h3>
+
+        {highlight && (
+          <p className="text-xs text-primary mt-2 font-medium">
+            {highlight}
+          </p>
+        )}
+
         <p className="text-muted mt-3 text-sm leading-relaxed">{desc}</p>
+
+        {/* TECH STACK */}
+        <div className="flex flex-wrap gap-2 mt-4">
+          {tech?.map((t, i) => (
+            <span
+              key={i}
+              className="text-xs bg-gray-100 px-3 py-1 rounded-full"
+            >
+              {t}
+            </span>
+          ))}
+        </div>
       </div>
 
-      {link && (
-        <a href={link} target="_blank" className="text-primary mt-4">
-          View on GitHub →
-        </a>
-      )}
-
-      {website && (
-        <a href={website} target="_blank" className="text-primary mt-4">
-          Visit Website →
-        </a>
-      )}
+      <div className="flex gap-4 mt-6">
+        {link && (
+          <a href={link} target="_blank" className="text-primary text-sm">
+            GitHub →
+          </a>
+        )}
+        {website && (
+          <a href={website} target="_blank" className="text-primary text-sm">
+            Live →
+          </a>
+        )}
+      </div>
     </div>
   );
 }
@@ -200,9 +210,9 @@ function Project({ title, desc, link, website }) {
 function Footer() {
   return (
     <footer className="mt-32 border-t border-gray-200 pt-10 pb-6 text-center text-sm text-muted">
-      <p>© {new Date().getFullYear()} Humza Anwar Khan. All rights reserved.</p>
+      <p>© {new Date().getFullYear()} Humza Anwar Khan</p>
       <p className="mt-2">
-        Built with React & Tailwind · Security-first mindset
+        Built with React & Tailwind · Security-focused development
       </p>
     </footer>
   );
